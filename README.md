@@ -1,4 +1,5 @@
 # AsMac
+![Test Image 1](demo.png)
 demo code of AsMac Algorithm
 
 ## 1. preparing training and testing data
