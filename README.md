@@ -3,6 +3,11 @@ demo code of AsMac Algorithm
 
 ## 1. preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan)
+Or use the attached version:
+```console
+cd CppAlign
+unzip seqan.zip
+```
 
 Compile the c++ code in folder CppAlign.
 ```console
