@@ -1,7 +1,6 @@
 # AsMac
-![Test Image 1](demo.png)
 demo code of AsMac Algorithm
-
+![Test Image 1](demo.png)
 ## 1. preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan)
 Or use the attached version:
