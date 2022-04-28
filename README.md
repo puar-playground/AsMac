@@ -5,8 +5,7 @@ demo code of AsMac Algorithm
 Download `C++` library [SeqAn](https://github.com/seqan/seqan)
 Or use the attached version:
 ```console
-cd CppAlign
-unzip seqan.zip
+unzip CppAlign/seqan.zip
 ```
 
 Compile the c++ code in folder CppAlign.
