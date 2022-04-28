@@ -29,7 +29,7 @@ class AsMac(nn.Module):
         self.cosine = nn.CosineSimilarity()
 
     def __repr__(self):
-        model_str = 'EINN('
+        model_str = 'AsMac('
         filter_str = '(weight): SoftNW1d(' + str(self.weights.shape[1]) + ', ' + str(
             self.weights.shape[0]) + ', kernel_size=' + str(self.weights.shape[2]) + ')'
         main_str = '\n'.join([model_str, filter_str, ')'])
