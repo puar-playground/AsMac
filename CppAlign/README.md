@@ -23,7 +23,8 @@ The executable take exact 2 command line input separated by space " "
 ```
 
 The executable will create a output file in the same directory where the input file is located.
-The alignment distance between sequences is written in the output file, with the name of input followed with `_dist`. e.g. input: `~/usr/path/sequence.fa`, output: `~/usr/path/sequence_dist.txt`
+The alignment distance between sequences is written in the output file, with the name of input followed with `_dist`.<br />
+e.g. input: `~/usr/path/sequence.fa`, output: `~/usr/path/sequence_dist.txt`
 
 ## Requirement
 The code use high performance `C++` library [SeqAn](https://github.com/seqan/seqan)
