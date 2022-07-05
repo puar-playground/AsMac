@@ -33,4 +33,4 @@ jupyter notebook demo.ipynb
 ```
 ## 4. Reference
 The code is a demo for the Continuous Sequence Matching model introduced in the paper:
-[Predicting Alignment Distances via Continuous Sequence Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v2)
+[Alignment-free Sequence Comparisons via Approximate String Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v3)
