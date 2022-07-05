@@ -16,7 +16,7 @@ Then generate alignment distance result for the input sequences.
 ```console
 ./align ../data/training_seq.fa 0
 ```
-This might cost more than 1 day. The demo code use the finished result: training_dist_prepared.txt
+This alignment process using the NW algorithm might cost more than 1 day. The demo code use the finished result: training_dist_prepared.txt
 
 ## 2. Compile the Cython code for soft-NW algorithm.
 ```console
