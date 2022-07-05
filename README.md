@@ -1,6 +1,6 @@
 # AsMac
 demo code of AsMac Algorithm
-## 1. preparing training and testing data
+## 1. Preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
 ```
 unzip seqan.zip
