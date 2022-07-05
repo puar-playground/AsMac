@@ -25,7 +25,7 @@ python setup_softnw.py build_ext --inplace
 ```
 This will compile the `_softnw.pyx` file to a `.so` file. This file is required to run the `jupyter-notebook` demo
 
-## Python Virtualenv Preparation
+## 3. Python Virtualenv Preparation
 If a python environment has not been setup yet, please follow these steps to create a virtual environment. Or just move to step 4.
 Install virtualenv for python3
 ```
@@ -41,7 +41,7 @@ source ./venv3/bin/activate
 pip install -r environment.txt
 ```
 
-## 3. Run the demo code
+## 4. Run the demo code
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`
 Simply run the notebook file `demo.ipynb`
 ```
@@ -50,8 +50,6 @@ jupyter notebook demo.ipynb
 
 
 
-
-
-## 4. Reference
+## 5. Reference
 The code is a demo for the Continuous Sequence Matching model introduced in the paper:
 [Alignment-free Sequence Comparisons via Approximate String Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v3)
