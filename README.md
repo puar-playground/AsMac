@@ -24,8 +24,9 @@ Install virtualenv for python3
 ```
 sudo pip3 install virtualenv
 ```
-Create a virtual environment named venv3 or prefered directory
+Go back to the main directory and create a virtual environment named venv3 or prefered directory
 ```
+cd ..
 virtualenv -p python3 venv3
 ```
 Activate the python virtual environment and install packages.
@@ -37,7 +38,6 @@ pip install -r environment.txt
 
 ## 3. Compile the Cython code for soft-NW algorithm.
 ```
-cd ..
 python setup_softnw.py build_ext --inplace
 ```
 This will compile the `_softnw.pyx` file to a `.so` file. This file is required to run the `jupyter-notebook` demo
