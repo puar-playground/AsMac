@@ -7,14 +7,14 @@ Or use the attached version:
 unzip seqan.zip
 ```
 
-Compile the c++ code in folder CppAlign.
+Compile the c++ code for NW alignment.
 ```
-cd CppAlign
-g++ -I "seqan_library_dir" -std=c++1z -o align main.cpp read_fasta.cpp
+g++ -I . -std=c++1z -o align CppAlign/main.cpp CppAlign/read_fasta.cpp
 ```
+
 Then generate alignment distance result for the input sequences.
 ```
-./align ../data/training_seq.fa 0
+./CppAlign/align ./data/training_seq.fa 0
 ```
 This alignment process using the NW algorithm might cost more than 1 day. The demo code use the finished result: training_dist_prepared.txt
 
@@ -24,9 +24,8 @@ Install virtualenv for python3
 ```
 sudo pip3 install virtualenv
 ```
-Go back to the main directory and create a virtual environment named venv3 or prefered directory
+Create a virtual environment named venv3 or prefered directory
 ```
-cd ..
 virtualenv -p python3 venv3
 ```
 Activate the python virtual environment and install packages.
