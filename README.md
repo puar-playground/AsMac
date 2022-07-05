@@ -28,7 +28,9 @@ This will compile the `_softnw.pyx` file to a `.so` file. This file is required 
 ## 3. Run the demo code
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`
 Simply run the notebook file `demo.ipynb`
-
+```console
+jupyter notebook demo.ipynb
+```
 ## 4. Reference
 The code is a demo for the Continuous Sequence Matching model introduced in the paper:
 [Predicting Alignment Distances via Continuous Sequence Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v2)
