@@ -26,7 +26,7 @@ python setup_softnw.py build_ext --inplace
 This will compile the `_softnw.pyx` file to a `.so` file. This file is required to run the `jupyter-notebook` demo
 
 ## 3. Python Virtualenv Preparation
-If a python environment has not been setup yet, please follow these steps to create a virtual environment. Or just run the demo code following step 4.<br />
+If a python environment has not been setup yet, please follow these steps to create a virtual environment.<br />
 Install virtualenv for python3
 ```
 sudo pip3 install virtualenv
