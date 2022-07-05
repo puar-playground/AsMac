@@ -34,10 +34,6 @@ source ./venv3/bin/activate
 pip install -r environment.txt
 ```
 
-To enter the python environment, run:
-```
-source ./venv3/bin/activate
-```
 
 ## 3. Compile the Cython code for soft-NW algorithm.
 ```
