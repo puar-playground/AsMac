@@ -28,14 +28,6 @@ typedef Row<TAlign>::Type TRow;                 // gapped sequence type
 
 int main(int argc, char** argv) {
 
-//    create output dir
-    const int dir_err = system("mkdir -p ./output");
-    if (-1 == dir_err)
-    {
-        printf("Error creating directory!n");
-        exit(1);
-    }
-
 //    initialize from input
 string input_dir = argv[1];
 string output_dir = input_dir;
