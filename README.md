@@ -25,15 +25,17 @@ Create a virtual environment
 python3 -m venv venv3
 ```
 
-Activate the python virtual environment and install packages.<br />
+Activate the python virtual environment.<br />
 For Linux/MacOS:
 ```
 source ./venv3/bin/activate
-pip install -r environment.txt
 ```
 For Windows:
 ```
 .\venv3\Scripts\activate
+```
+Then, install packages.
+```
 pip install -r environment.txt
 ```
 
