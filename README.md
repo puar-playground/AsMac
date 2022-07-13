@@ -28,7 +28,7 @@ or
 python3 -m venv venv3
 ```
 
-Activate the python virtual environment and install packages.
+Activate the python virtual environment and install packages.<br />
 For Linux/MacOS:
 ```
 source ./venv3/bin/activate
@@ -58,5 +58,5 @@ jupyter notebook demo.ipynb
 
 
 ## 5. Reference
-The code is a demo for the Continuous Sequence Matching model introduced in the paper:
+The code is a demo for the Continuous Sequence Matching model introduced in the paper:<br />
 [Alignment-free Sequence Comparisons via Approximate String Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v3)
