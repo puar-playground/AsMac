@@ -15,7 +15,7 @@ Then generate alignment distance result for the input sequences.
 This alignment process using the NW algorithm might cost more than 1 day. The demo code uses the finished result: training_dist_prepared.txt
 
 ## 2. Python virtualenv preparation (optional)
-The algorithm demo is written in `Python 3.7`. If a python environment has not been setup yet, please follow these steps to create a virtual environment.<br />
+If a python environment for `Python 3.7` or later version has not been setup yet, please follow these steps to create a virtual environment.<br />
 Install virtualenv for python3
 ```
 sudo pip3 install virtualenv
