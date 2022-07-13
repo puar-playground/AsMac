@@ -11,13 +11,3 @@ setup(
   name = "fastloop",
   cmdclass = {"build_ext": build_ext},
   ext_modules = ext_modules)
-
-# ext_modules=[ Extension("_pnwfix",
-#               ["_pnwfix.pyx"],
-#               libraries=["m"],
-#               extra_compile_args = ["-ffast-math"])]
-#
-# setup(
-#   name = "fastloop",
-#   cmdclass = {"build_ext": build_ext},
-#   ext_modules = ext_modules)
