@@ -1,7 +1,7 @@
 # AsMac
 demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
 
-## 1. Preparing training and testing data
+## 1. Preparing training and testing data (optional)
 Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
 ```
 unzip seqan.zip
@@ -12,7 +12,7 @@ Then generate alignment distance result for the input sequences.
 ```
 ./CppAlign/align ./data/training_seq.fa 0
 ```
-This alignment process using the NW algorithm might cost more than 1 day. The demo code use the finished result: training_dist_prepared.txt
+This alignment process using the NW algorithm might cost more than 1 day. The demo code uses the finished result: training_dist_prepared.txt
 
 ## 2. Python virtualenv preparation (optional)
 The algorithm demo is written in `Python 3.7`. If a python environment has not been setup yet, please follow these steps to create a virtual environment.<br />
