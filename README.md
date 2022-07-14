@@ -30,10 +30,6 @@ For Linux/MacOS:
 ```
 source ./venv3/bin/activate
 ```
-For Windows:
-```
-.\venv3\Scripts\activate
-```
 Then, install packages.
 ```
 pip install -r environment.txt
