@@ -44,7 +44,7 @@ This will compile the `_softnw.pyx` file to a `.so` file. This file is required 
 python AsMac.py -i path/to/your/sequences.fasta
 ```
 
-## 5. Run the demo code for training
+## 5. Run the demo code for training (optional)
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`
 Simply run the notebook file `demo.ipynb`
 ```
