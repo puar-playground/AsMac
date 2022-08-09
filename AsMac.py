@@ -38,10 +38,21 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", required=False
                         , help="prefered output directory. default: current working directory", default=os.getcwd())
     args = vars(parser.parse_args())
-    input_file_name = os.path.split(args["input"])[1]
-    input_file_name = input_file_name.split('.')[0]
-    out_path = os.path.join(args["output"], input_file_name + '_similarity.' + 'csv')
-    print(out_path)
+
+    input_file = os.path.split(args["input"])[1]
+    input_file_name = input_file.split('.')[0]
+    input_dir = os.path.split(args["input"])[0]
+    output_file_default = input_file_name + '_similarity.' + 'csv'
+
+    output_file = os.path.split(args["output"])[1]
+    output_file_name = output_file.split('.')[0]
+
+    if args["output"] == os.getcwd():
+        out_path = os.path.join(args["output"], output_file_default)
+    elif output_file.endswith(".csv"):
+        out_path = args["output"]
+    else:
+        raise ValueError('Invalid output format, csv required.')
 
     # load sequences from input file
     info_list, seq_list, max_l, min_l = read_fasta(args["input"])
@@ -68,3 +79,4 @@ if __name__ == "__main__":
     np.fill_diagonal(predictions, 0)
     out_df = pd.DataFrame(predictions, columns=info_list, index=info_list)
     out_df.to_csv(out_path)
+    print(out_path)
