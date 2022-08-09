@@ -79,4 +79,5 @@ if __name__ == "__main__":
     np.fill_diagonal(predictions, 0)
     out_df = pd.DataFrame(predictions, columns=info_list, index=info_list)
     out_df.to_csv(out_path)
-
+    print('Result saved in: %s' % out_path)
+    
