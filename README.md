@@ -39,8 +39,12 @@ python setup_softnw.py build_ext --inplace
 ```
 This will compile the `_softnw.pyx` file to a `.so` file. This file is required to run the `jupyter-notebook` demo
 
+## 4. Run AsMac
+```
+python AsMac.py -i path/to/your/sequences.fasta
+```
 
-## 4. Run the demo code
+## 5. Run the demo code for training
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`
 Simply run the notebook file `demo.ipynb`
 ```
