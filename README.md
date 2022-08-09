@@ -21,7 +21,7 @@ python setup_softnw.py build_ext --inplace
 
 ## 2. Run AsMac
 ```
-python AsMac.py -i path/to/your/sequences.fasta
+python AsMac.py -i path/to/your/sequences.fasta -o path/to/your/output
 ```
 
 
