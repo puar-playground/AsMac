@@ -1,7 +1,8 @@
 # AsMac
-demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
+AsMac is a machine learning model for pairwise comparison between full-length 16S rRNA sequences..<br />
+The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`. Demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
 
-# For pairwise comparison between full-length 16S rRNA sequences
+# Installation
 ## 1. Python virtualenv preparation
 If a python environment for `Python 3.7` or later version has not been setup yet, please follow these steps to create a virtual environment.<br />
 Install and create a virtual environment for python3
@@ -38,10 +39,7 @@ Then generate alignment distance result for the input sequences.
 ```
 This alignment process using the NW algorithm might cost more than 1 day. The demo code uses the finished result: training_dist_prepared.txt
 
-
-## 2. Run the demo code for training (optional)
-The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`
-Simply run the notebook file `demo.ipynb`
+## 2. Run the demo code for training
 ```
 jupyter notebook demo.ipynb
 ```
