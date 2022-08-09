@@ -2,14 +2,11 @@
 demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
 
 # For pairwise comparison between full-length 16S rRNA sequences
-## 1 Python virtualenv preparation (optional)
+## 1. Python virtualenv preparation
 If a python environment for `Python 3.7` or later version has not been setup yet, please follow these steps to create a virtual environment.<br />
-Install virtualenv for python3
+Install and create a virtual environment for python3
 ```
 sudo pip3 install virtualenv
-```
-Create a virtual environment
-```
 python3 -m venv venv3
 ```
 
@@ -21,7 +18,7 @@ pip install -r environment.txt
 python setup_softnw.py build_ext --inplace
 ```
 
-## 2 Run AsMac
+## 2. Run AsMac
 ```
 python AsMac.py -i path/to/your/sequences.fasta
 ```
@@ -48,7 +45,6 @@ Simply run the notebook file `demo.ipynb`
 ```
 jupyter notebook demo.ipynb
 ```
-
 
 
 ## Reference
