@@ -19,7 +19,7 @@ pip install -r environment.txt
 python setup_softnw.py build_ext --inplace
 ```
 
-## 2. Run AsMac
+## Usage
 ```
 python AsMac.py -i path/to/your/sequences.fasta -o path/to/your/output.csv
 ```
