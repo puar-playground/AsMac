@@ -20,9 +20,16 @@ python setup_softnw.py build_ext --inplace
 ```
 
 ## Usage
+Run the script as
 ```
 python AsMac.py -i path/to/your/sequences.fasta -o path/to/your/output.csv
 ```
+AsMac takes input sequences of fasta format and output a pairwise distance matrix in a CSV table. For example:
+|       | seq_1 | seq_2 | seq_3 | 
+| ----------- | ----------- | ----------- | ----------- | 
+| seq_1 | 0   | 0.2   | 0.3 | 
+| seq_2 | 0.2   | 0   | 0.1 | 
+| seq_3 | 0.3   | 0.1   | 0 |
 
 
 # Train new model (optional)
