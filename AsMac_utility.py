@@ -12,12 +12,12 @@ from torch.utils.data import Dataset
 
 
 def one_hot(ss):
-    basis = {'A': 0, 'T': 1, 'C': 2, 'G': 3}
+    basis = {'A': 0, 'T': 1, 'U': 1, 'C': 2, 'G': 3}
     feature_list = []
     for j, s in enumerate(ss):
         feature = np.zeros([4, len(s)])
         for i, c in enumerate(s):
-            if c not in ['A', 'T', 'G', 'C']:
+            if c not in ['A', 'T', 'U', 'G', 'C']:
                 continue
             else:
                 feature[basis[c], i] = 1

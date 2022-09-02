@@ -17,11 +17,11 @@ def read_fasta(seq_dir):
             break
         seq = f_s.readline()[:-1]
 
-        if set(seq).issubset({'A', 'T', 'G', 'C'}):
+        if set(seq).issubset({'A', 'T', 'U', 'G', 'C'}):
             info_list.append(info)
             seq_list.append(seq)
         else:
-            raise ValueError('input sequence has symbol other than {A,T,C,G}')
+            raise ValueError('input sequence has symbol other than {A,T,U,C,G}')
 
     len_list = [len(s) for s in seq_list]
     max_l = max(len_list)
@@ -31,12 +31,15 @@ def read_fasta(seq_dir):
 
 
 if __name__ == "__main__":
+
     parser = argparse.ArgumentParser(
         description='AsMac is a machine learning model for full length 16S rRNA sequence comparison')
     parser.add_argument("-i", "--input", required=True,
                         help="directory of the input fasta file)")
     parser.add_argument("-o", "--output", required=False
                         , help="prefered output directory. default: current working directory", default=os.getcwd())
+    parser.add_argument("-m", "--model", required=False
+                        , help="Model choice: 16S-full, 16S-V4, 16S-V4-V5, 23S-full, 23S-V5. default: full-16S", default='16S-full')
     args = vars(parser.parse_args())
 
     input_file = os.path.split(args["input"])[1]
@@ -46,7 +49,6 @@ if __name__ == "__main__":
 
     output_file = os.path.split(args["output"])[1]
     output_file_name = output_file.split('.')[0]
-
     if args["output"] == os.getcwd():
         out_path = os.path.join(args["output"], output_file_default)
     elif output_file.endswith(".csv"):
@@ -54,19 +56,24 @@ if __name__ == "__main__":
     else:
         raise ValueError('Invalid output format, csv required.')
 
+    seq_lengths = {'16S-full': 1400, '16S-V4': 151, '16S-V4-V5': 465, '23S-full': 3000, '23S-V5': 400}
+    model_type = os.path.split(args["model"])[1]
+    if model_type in {'16S-full', '16S-V4', '16S-V4-V5', '23S-full', '23S-V5'}:
+        print('Using model: %s, expecting sequence length of ~%i' % (model_type, seq_lengths[model_type]))
+    else:
+        raise ValueError('Unsupported sequence type. Please choose one from : 16S-full, 16S-V4, 16S-V4-V5, 23S-full, 23S-V5.')
+
     # load sequences from input file
     info_list, seq_list, max_l, min_l = read_fasta(args["input"])
     print('%i sequences loaded. length range:[%i, %i]' % (len(seq_list), min_l, max_l))
     seq_oh = one_hot(seq_list)  # convert to one-hot
 
     # define model
-    # number of kernel sequences
-    embed_dim = 300
-    # kernel length
-    kernel_size = 20
+    embed_dim = 300  # number of kernel sequences
+    kernel_size = 20  # kernel length
     # initialize EINN object
     net = AsMac(4, embed_dim, kernel_size)
-    net_state_dict = torch.load('model/final.pt')
+    net_state_dict = torch.load('model/' + model_type + '.pt')
     net.load_state_dict(net_state_dict)
     print('AsMac model loaded')
 
