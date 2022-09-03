@@ -2,7 +2,7 @@
 AsMac is a machine learning model for pairwise comparison between full-length 16S rRNA sequences..<br />
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`. Demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
 
-## Installation
+## 1. Installation
 If a python environment for `Python 3.7` or later version has not been setup yet, please follow these steps to create a virtual environment.<br />
 Install and create a virtual environment for python3
 ```
@@ -18,7 +18,7 @@ pip install -r environment.txt
 python setup_softnw.py build_ext --inplace
 ```
 
-## Usage
+## 2. Usage
 Choose a model with the -m flag, and run the script like this example:
 ```
 python AsMac.py -i path/to/your/sequences.fasta -o path/to/your/output.csv -m 16S-full
@@ -31,7 +31,7 @@ AsMac takes input sequences of fasta format and output a pairwise distance matri
 | seq_3 | 0.3   | 0.1   | 0 |
 
 
-## Train new model (optional)
+## 3. Train new model (optional)
 ## Preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
 ```
