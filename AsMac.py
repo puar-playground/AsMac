@@ -39,13 +39,13 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", required=False
                         , help="prefered output directory. default: current working directory", default=os.getcwd())
     parser.add_argument("-m", "--model", required=False
-                        , help="Model choice: 16S-full, 16S-V4, 16S-V4-V5, 23S-full, 23S-V5. default: full-16S", default='16S-full')
+                        , help="Model choice: 16S-full, 23S-full, 23S-V5. default: full-16S", default='16S-full')
     args = vars(parser.parse_args())
 
     input_file = os.path.split(args["input"])[1]
     input_file_name = input_file.split('.')[0]
     input_dir = os.path.split(args["input"])[0]
-    output_file_default = input_file_name + '_similarity.' + 'csv'
+    output_file_default = input_file_name + '_distances.' + 'csv'
 
     output_file = os.path.split(args["output"])[1]
     output_file_name = output_file.split('.')[0]
@@ -57,11 +57,12 @@ if __name__ == "__main__":
         raise ValueError('Invalid output format, csv required.')
 
     seq_lengths = {'16S-full': 1400, '16S-V4': 151, '16S-V4-V5': 465, '23S-full': 3000, '23S-V5': 400}
+    embed_dims = {'16S-full': 300, '16S-V4': 200, '16S-V4-V5': 200, '23S-full': 300, '23S-V5': 300}
     model_type = os.path.split(args["model"])[1]
     if model_type in {'16S-full', '16S-V4', '16S-V4-V5', '23S-full', '23S-V5'}:
         print('Using model: %s, expecting sequence length of ~%i' % (model_type, seq_lengths[model_type]))
     else:
-        raise ValueError('Unsupported sequence type. Please choose one from : 16S-full, 16S-V4, 16S-V4-V5, 23S-full, 23S-V5.')
+        raise ValueError('Unsupported sequence type. Please choose one from : 16S-full, 23S-full, 23S-V5.')
 
     # load sequences from input file
     info_list, seq_list, max_l, min_l = read_fasta(args["input"])
@@ -69,7 +70,7 @@ if __name__ == "__main__":
     seq_oh = one_hot(seq_list)  # convert to one-hot
 
     # define model
-    embed_dim = 300  # number of kernel sequences
+    embed_dim = embed_dims[model_type]  # number of kernel sequences
     kernel_size = 20  # kernel length
     # initialize EINN object
     net = AsMac(4, embed_dim, kernel_size)
