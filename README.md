@@ -3,7 +3,6 @@ AsMac is a machine learning model for pairwise comparison between full-length 16
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`. Demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
 
 ## Installation
-## 1. Python virtualenv preparation
 If a python environment for `Python 3.7` or later version has not been setup yet, please follow these steps to create a virtual environment.<br />
 Install and create a virtual environment for python3
 ```
@@ -33,7 +32,7 @@ AsMac takes input sequences of fasta format and output a pairwise distance matri
 
 
 ## Train new model (optional)
-## 1. Preparing training and testing data
+## Preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
 ```
 unzip seqan.zip
@@ -46,7 +45,7 @@ Then generate alignment distance result for the input sequences.
 ```
 This alignment process using the NW algorithm might cost more than 1 day. The demo code uses the finished result: training_dist_prepared.txt
 
-## 2. Run the demo code for training
+## Run the demo code for training
 ```
 jupyter notebook demo.ipynb
 ```
