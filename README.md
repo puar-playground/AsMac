@@ -19,7 +19,11 @@ python setup_softnw.py build_ext --inplace
 ```
 
 ## 2. Usage
-Choose a model with the -m flag, and run the script like this example:
+Use -h or --help flags to get help text for the program.<br />
+```
+python AsMac.py -h
+```
+Choose a model with the -m or --model flags, and run the script like the example:
 ```
 python AsMac.py -i path/to/your/sequences.fasta -o path/to/your/output.csv -m 16S-full
 ```
