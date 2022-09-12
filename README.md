@@ -1,5 +1,5 @@
 # AsMac
-AsMac is a machine learning model for pairwise comparison between full-length 16S rRNA sequences..<br />
+AsMac is a machine learning model for pairwise comparison between rRNA sequences..<br />
 The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`. Demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
 
 ## 1. Installation
