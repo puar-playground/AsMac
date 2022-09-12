@@ -38,7 +38,6 @@ AsMac takes input sequences of fasta format and output a pairwise distance matri
 
 
 ## 3. Train new model (optional)
-just for machine learning researchers and programmers
 ## Preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
 ```
