@@ -1,9 +1,9 @@
 # AsMac
-AsMac is a machine learning model for pairwise comparison between rRNA sequences..<br />
-The algorithm demo is written in `Python 3.7`, model constructed by `torch 1.6.0`. Demo code of AsMac Algorithm. This instruction is for Linux/MacOS.
+AsMac is a machine learning model for pairwise comparison between rRNA sequences.<br />
+The algorithm demo is written in `Python 3.7`. This instruction is for Linux/MacOS.
 
 ## 1. Installation
-If a python environment for `Python 3.7` or later version has not been setup yet, please follow these steps to create a virtual environment.<br />
+If a python environment for `Python 3.7` or later version has not been set up yet, please follow these steps to create a virtual environment.<br />
 Install and create a virtual environment for python3
 ```
 sudo pip3 install virtualenv
@@ -48,7 +48,7 @@ Then generate alignment distance result for the input sequences.
 ```
 ./CppAlign/align ./data/training_seq.fa 0
 ```
-This alignment process using the NW algorithm might cost more than 1 day. The demo code uses the finished result: training_dist_prepared.txt
+This alignment process using the NW algorithm might cost more than a day. The demo code uses the finished result: training_dist_prepared.txt
 
 ## Run the demo code for training
 ```
@@ -59,3 +59,6 @@ jupyter notebook demo.ipynb
 ## Reference
 The code is a demo for the Continuous Sequence Matching model introduced in the paper:<br />
 [Alignment-free Sequence Comparisons via Approximate String Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v3)
+AsMac used the differentiable needleman wunsch algorithm described in 
+[Neural Edit Operations for Biological Sequences](https://proceedings.neurips.cc/paper/2018/hash/d0921d442ee91b896ad95059d13df618-Abstract.html)
+
