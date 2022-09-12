@@ -60,5 +60,5 @@ jupyter notebook demo.ipynb
 The code is a demo for the Continuous Sequence Matching model introduced in the paper:<br />
 [Alignment-free Sequence Comparisons via Approximate String Matching](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v3)
 AsMac used the differentiable needleman wunsch algorithm described in:<br />
-[Neural Edit Operations for Biological Sequences](https://proceedings.neurips.cc/paper/2018/hash/d0921d442ee91b896ad95059d13df618-Abstract.html)
+[Koide, Satoshi, Keisuke Kawano, and Takuro Kutsuna. "Neural edit operations for biological sequences." Advances in Neural Information Processing Systems 31 (2018).](https://proceedings.neurips.cc/paper/2018/hash/d0921d442ee91b896ad95059d13df618-Abstract.html)
 
