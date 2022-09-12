@@ -119,14 +119,18 @@ class SeqDataset(Dataset):
 
 
 
-def my_plot(x, y, save_fp, ylabel='EINN prediction'):
+def my_plot(x, y, save_fp, ylabel='AsMac prediction', axis_max=0.6):
     fig, ax = plt.subplots(figsize=(6, 6))
     ax.tick_params(axis='both', which='major', labelsize=15)
     # hb = ax.hexbin(x, y, gridsize=200, bins='log', extent=(0, 1, 0, 1))
-    hb = ax.hexbin(x, y, gridsize=200, bins='log', cmap='Blues', extent=(0, 1, 0, 1))
-    ax.plot(np.linspace(0, 1, 100), np.linspace(0, 1, 100), 'r')
+    hb = ax.hexbin(x, y, gridsize=200, bins='log', cmap='Blues', extent=(0, axis_max, 0, axis_max))
+    ax.plot(np.linspace(0, axis_max, 100), np.linspace(0, axis_max, 100), 'r')
     ax.set_xlabel('alignment distance', fontsize=20)
     ax.set_ylabel(ylabel, fontsize=20)
+    ax.xaxis.set_ticks(np.arange(0, axis_max + 0.1, 0.1))
+    ax.yaxis.set_ticks(np.arange(0, axis_max + 0.1, 0.1))
+    plt.ylim([0, axis_max])
+    plt.xlim([0, axis_max])
     plt.grid()
 
     cbar_ax = fig.add_axes([0.95, 0.1, 0.05, 0.8])
@@ -145,4 +149,3 @@ if __name__ == "__main__":
     dist_fp = 'data/training_dist_prepared.txt'
     test_data = SeqDataset(seq_fp, dist_fp, 10)
     print(test_data.M)
-
