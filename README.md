@@ -1,6 +1,6 @@
 # AsMac
 AsMac is a machine learning framework designed for pairwise comparison of [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences.<br />
-The algorithm demo is written in `Python 3.7`. This instruction is for Linux/MacOS.
+This algorithm implementation is written in `Python 3.7`. This instruction is for Linux/MacOS.
 
 ## 1. Installation
 If a python environment for `Python 3.7` or later version has not been set up yet, please follow these steps to create a virtual environment.<br />
@@ -59,7 +59,7 @@ jupyter notebook demo.ipynb
 
 
 ## Reference
-This code is the python implementation of the Continuous Sequence Matching model introduced in:<br />
+This code is the python implementation of the AsMac model introduced in:<br />
 [Chen, Jian, Le Yang, Lu Li, Steve Goodison, and Yijun Sun. "Alignment-free Sequence Comparisons via Approximate String Matching." bioRxiv (2022): 2020-05.](https://www.biorxiv.org/content/10.1101/2020.05.24.113852v3)<br />
 AsMac used the differentiable needleman wunsch algorithm described in:<br />
 [Koide, Satoshi, Keisuke Kawano, and Takuro Kutsuna. "Neural edit operations for biological sequences." Advances in Neural Information Processing Systems 31 (2018).](https://proceedings.neurips.cc/paper/2018/hash/d0921d442ee91b896ad95059d13df618-Abstract.html)
