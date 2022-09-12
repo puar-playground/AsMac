@@ -11,10 +11,12 @@ python3 -m venv venv3
 ```
 
 Activate the python virtual environment. Then, install packages.<br />
-For Linux/MacOS:
 ```
 source ./venv3/bin/activate
 pip install -r environment.txt
+```
+Build the cython executable by:
+```
 python setup_softnw.py build_ext --inplace
 ```
 
