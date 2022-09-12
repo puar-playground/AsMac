@@ -45,11 +45,11 @@ unzip seqan.zip
 g++ -I . -std=c++1z -o CppAlign/align CppAlign/main.cpp CppAlign/read_fasta.cpp
 ```
 
-Then generate alignment distance result for the input sequences.
+Then generate alignment distance results for the input sequences.
 ```
 ./CppAlign/align ./data/training_seq.fa 0
 ```
-This alignment process using the NW algorithm might cost more than a day. The demo code uses the finished result: training_dist_prepared.txt
+The alignment process is very time-consuming on a personal computer. The demo code uses the finished result: training_dist_prepared.txt
 
 ## Run the demo code for training
 ```
