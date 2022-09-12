@@ -1,5 +1,5 @@
 # AsMac
-AsMac is a machine learning method for pairwise comparison between [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences.<br />
+AsMac is a machine learning framework designed for pairwise comparison of [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences.<br />
 The algorithm demo is written in `Python 3.7`. This instruction is for Linux/MacOS.
 
 ## 1. Installation
