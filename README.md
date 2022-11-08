@@ -58,6 +58,6 @@ jupyter notebook demo.ipynb
 
 
 ## Reference
-1. [Jian Chen, Le Yang, Lu Li, Steve Goodison, and Yijun Sun. "Alignment-free Sequence Comparisons via Approximate String Matching." Bioinformatics Advances (2022).](https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbac077/6767843)<br />
+1. [Jian Chen, Le Yang, Lu Li, Steve Goodison, and Yijun Sun. "Alignment-free Comparison of Metagenomics Sequences via Approximate String Matching" Bioinformatics Advances (2022).](https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbac077/6767843)<br />
 2. [Koide, Satoshi, Keisuke Kawano, and Takuro Kutsuna. "Neural edit operations for biological sequences." Advances in Neural Information Processing Systems 31 (2018).](https://proceedings.neurips.cc/paper/2018/hash/d0921d442ee91b896ad95059d13df618-Abstract.html)
 
