@@ -19,7 +19,7 @@ Build the cython executable by:
 python setup_softnw.py build_ext --inplace
 ```
 
-## 2. Usage
+## 2. Distance estimation
 Use -h or --help flags to get help text for the program.<br />
 ```
 python AsMac.py -h
@@ -40,8 +40,10 @@ AsMac takes input sequences written in fasta format and outputs a pairwise dista
 | seq_2 | 0.2   | 0   | 0.1 | 
 | seq_3 | 0.3   | 0.1   | 0 |
 
+## 3. Computing sequence representations
+The embedding.py script provided the demo for using AsMac as a pre-trained encoder.
 
-## 3. Train new model (optional)
+## 4. Train new model (optional)
 ## Preparing training and testing data
 Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
 ```
