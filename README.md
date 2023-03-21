@@ -14,13 +14,13 @@ Activate the python virtual environment. Then, install packages.<br />
 source ./venv3/bin/activate
 pip install -r environment.txt
 ```
-Build the cython executable by:
+Build the `cython` executable by:
 ```
 python setup_softnw.py build_ext --inplace
 ```
 
 ## 2. Distance estimation
-Use -h or --help flags to get help text for the program.<br />
+Use `-h` or `--help` flags to get help text for the program.<br />
 ```
 python AsMac.py -h
 ```
@@ -45,7 +45,7 @@ The `embedding.py` script provided the demo for using AsMac as a pre-trained enc
 
 ## 4. Train new model (optional)
 ## Preparing training and testing data
-Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the c++ code for NW alignment.
+Download `C++` library [SeqAn](https://github.com/seqan/seqan) or use the attached version to compile the `C++` code for NW alignment.
 ```
 unzip seqan.zip
 g++ -I . -std=c++1z -o CppAlign/align CppAlign/main.cpp CppAlign/read_fasta.cpp
