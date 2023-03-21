@@ -29,7 +29,7 @@ Choose a model with the -m or --model flags, and run the script:
 ```
 python AsMac.py -i path/to/input.fasta -o path/to/output.csv -m 16S-full
 ```
-for like the example:
+for example:
 ```
 python AsMac.py -i ./data/testing_seq.fa -o ./out.csv -m 16S-full
 ```
