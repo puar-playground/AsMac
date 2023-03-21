@@ -25,10 +25,15 @@ Use -h or --help flags to get help text for the program.<br />
 ```
 python AsMac.py -h
 ```
-Choose a model with the -m or --model flags, and run the script like the example:
+Choose a model with the -m or --model flags, and run the script:
 ```
 python AsMac.py -i path/to/input.fasta -o path/to/output.csv -m 16S-full
 ```
+for like the example:
+```
+python AsMac.py -i ./data/testing_seq.fa -o ./out.csv -m 16S-full
+```
+
 AsMac takes input sequences written in fasta format and outputs a pairwise distance matrix in a CSV table. For example:
 |       | seq_1 | seq_2 | seq_3 | 
 | ----------- | ----------- | ----------- | ----------- | 
