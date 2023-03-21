@@ -1,4 +1,4 @@
-from AsMac_model import AsMac
+from AsMac_model_parallel import AsMac_parallel
 from AsMac_utility import *
 import torch
 torch.set_printoptions(profile="full")
@@ -34,7 +34,7 @@ def show_pca(data):
 
 if __name__ == "__main__":
 
-    net = AsMac(4, 300, 20)
+    net = AsMac_parallel(4, 300, 20)
     net_state_dict = torch.load('./model/16S-full.pt')
     net.load_state_dict(net_state_dict)
 
@@ -47,17 +47,13 @@ if __name__ == "__main__":
         print(seq_list[i])
 
     # convert to one hot sequences
-    seq_oh = one_hot(seq_list[:10])
-    # initialize a numpy matrix to save the embeddings
-    embeddings = torch.zeros([len(seq_oh), 300])
-    # compute the embeddings one by one
-    for i, seq in enumerate(seq_oh):
-        embeddings[i, :] = net.test_embed(seq)
+    seq_oh = one_hot(seq_list)
+    embeddings = net(seq_oh).detach().numpy().astype(np.float64)
 
     print('%i embedding vectors done' % len(seq_oh))
     print(embeddings.shape)
     # show PCA plot
-    show_pca(embeddings.detach().numpy())
+    show_pca(embeddings)
 
 
 

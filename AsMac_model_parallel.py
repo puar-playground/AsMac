@@ -76,7 +76,7 @@ class AsMac_parallel(nn.Module):
 
         return embed
 
-    # single thread
+    # single embedding
     def test_embed(self, seq):
         embed = torch.zeros([self.out_dim])
         for i in range(self.out_dim):
@@ -89,7 +89,7 @@ class AsMac_parallel(nn.Module):
         embed = F.normalize(input=F.relu(embed), p=2, dim=0)
         return embed
 
-    # single entry embedding without gradient
+    # embedding function without gradient
     def test_embed_p(self, my_input):
         (i, seq, embeddings) = my_input
         embeddings[i, :] = self.test_embed(seq)
