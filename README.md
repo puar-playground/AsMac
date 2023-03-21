@@ -1,6 +1,6 @@
 # AsMac
 AsMac is a machine learning framework designed for pairwise comparison of [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences.<br />
-This algorithm implementation is written in `Python 3.7`. This instruction is for Linux/MacOS.
+This is the multiprocessing implementation written in `Python 3`. The instruction is for Linux/MacOS.
 
 ## 1. Installation
 If a python environment for `Python 3.7` or later version has not been set up yet, please follow these steps to create a virtual environment.<br />
