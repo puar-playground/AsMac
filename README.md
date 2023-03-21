@@ -40,7 +40,7 @@ AsMac takes input sequences written in fasta format and outputs a pairwise dista
 | seq_2 | 0.2   | 0   | 0.1 | 
 | seq_3 | 0.3   | 0.1   | 0 |
 
-## 3. Computing sequence representations
+## 3. Encoding sequence representations
 The `embedding.py` script provided the demo for using AsMac as a pre-trained encoder.
 
 ## 4. Train new model (optional)
