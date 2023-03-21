@@ -1,7 +1,7 @@
 import argparse
 import os
 import time
-from AsMac_model import AsMac
+from AsMac_model_parallel import AsMac_parallel
 from AsMac_utility import *
 import torch
 import pandas as pd
@@ -31,7 +31,6 @@ def read_fasta(seq_dir):
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(
         description='AsMac is a machine learning model for full length 16S rRNA sequence comparison')
     parser.add_argument("-i", "--input", required=True,
@@ -39,7 +38,8 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", required=False
                         , help="prefered output directory. default: current working directory", default=os.getcwd())
     parser.add_argument("-m", "--model", required=False
-                        , help="Model choice: 16S-full, 16S-V4, 16S-V3-V4, 23S-full, 23S-V5. default: full-16S", default='16S-full')
+                        , help="Model choice: 16S-full, 16S-V4, 16S-V3-V4, 23S-full, 23S-V5. default: full-16S",
+                        default='16S-full')
     args = vars(parser.parse_args())
 
     input_file = os.path.split(args["input"])[1]
@@ -61,7 +61,8 @@ if __name__ == "__main__":
     if model_type in {'16S-full', '16S-V4', '16S-V3-V4', '23S-full', '23S-V5'}:
         print('Using model: %s, expecting sequence length of ~%i' % (model_type, seq_lengths[model_type]))
     else:
-        raise ValueError('Unsupported sequence type. Please choose one from : 16S-full, 16S-V4, 16S-V3-V4, 23S-full, 23S-V5.')
+        raise ValueError(
+            'Unsupported sequence type. Please choose one from : 16S-full, 16S-V4, 16S-V3-V4, 23S-full, 23S-V5.')
 
     # load sequences from input file
     info_list, seq_list, max_l, min_l = read_fasta(args["input"])
@@ -72,7 +73,7 @@ if __name__ == "__main__":
     embed_dim = 300  # number of kernel sequences
     kernel_size = 20  # kernel length
     # initialize AsMac model
-    net = AsMac(4, embed_dim, kernel_size)
+    net = AsMac_parallel(4, embed_dim, kernel_size)
     net_state_dict = torch.load('model/' + model_type + '.pt')
     net.load_state_dict(net_state_dict)
     print('AsMac model loaded')
@@ -80,11 +81,10 @@ if __name__ == "__main__":
     # AsMac! Do the thing!
     tic = time.time()
     print('Computing embeddings for the sequences...')
-    predictions = net.test_forward(seq_oh).detach().numpy().astype(np.float64)
+    predictions = net.forward_test(seq_oh).detach().numpy().astype(np.float64)
     toc = time.time()
     print('Done!, cost %.2f seconds' % (toc - tic))
     np.fill_diagonal(predictions, 0)
     out_df = pd.DataFrame(predictions, columns=info_list, index=info_list)
     out_df.to_csv(out_path)
     print('Result saved in: %s' % out_path)
-    
