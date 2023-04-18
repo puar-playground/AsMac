@@ -12,7 +12,7 @@ python3 -m venv venv3
 Activate the python virtual environment. Then, install packages.<br />
 ```
 source ./venv3/bin/activate
-pip install -r environment.txt
+pip install -r requirements.txt
 ```
 Build the `cython` executable by:
 ```
