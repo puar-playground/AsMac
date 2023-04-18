@@ -3,6 +3,6 @@ Cython==0.29.24
 jupyter==1.0.0
 matplotlib
 pandas
-torch==1.10.0
+torch==1.13.1
 plotly
 sklearn
