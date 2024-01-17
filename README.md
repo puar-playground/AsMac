@@ -1,5 +1,5 @@
 # AsMac
-This is the multiprocessing implementation of AsMac, a machine learning framework designed for pairwise comparison of [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences. The following instruction is for Linux/MacOS.<br /> 
+This is the multiprocessing implementation of [AsMac](https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbac077/6767843), a machine learning framework designed for pairwise comparison of [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences. The following instruction is for Linux/MacOS.<br /> 
 
 ## 1. Installation
 If a python environment for `Python 3.7` or later version has not been set up yet, please follow these steps to create a virtual environment.<br />
@@ -64,6 +64,15 @@ jupyter notebook demo.ipynb
 
 
 ## Reference
-1. [Jian Chen, Le Yang, Lu Li, Steve Goodison, and Yijun Sun. "Alignment-free Comparison of Metagenomics Sequences via Approximate String Matching." Bioinformatics Advances (2022).](https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbac077/6767843)<br />
-2. [Koide, Satoshi, Keisuke Kawano, and Takuro Kutsuna. "Neural edit operations for biological sequences." Advances in Neural Information Processing Systems 31 (2018).](https://proceedings.neurips.cc/paper/2018/hash/d0921d442ee91b896ad95059d13df618-Abstract.html)
-
+```
+@article{chen2022alignment,
+  title={Alignment-free comparison of metagenomics sequences via approximate string matching},
+  author={Chen, Jian and Yang, Le and Li, Lu and Goodison, Steve and Sun, Yijun},
+  journal={Bioinformatics Advances},
+  volume={2},
+  number={1},
+  pages={vbac077},
+  year={2022},
+  publisher={Oxford University Press}
+}
+```
