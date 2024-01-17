@@ -1,6 +1,6 @@
 # AsMac
 
-This is the multiprocessing implementation of the paper:<br /> 
+This is the multiprocessing implementation of the paper:
 "[Alignment-free comparison of metagenomics sequences via approximate string matching](https://academic.oup.com/bioinformaticsadvances/advance-article/doi/10.1093/bioadv/vbac077/6767843)"<br />
 AsMac is a machine learning framework designed for pairwise comparison of [ribosomal RNA](https://en.wikipedia.org/wiki/Ribosomal_RNA) sequences. The following instruction is for Linux/MacOS.<br /> 
 
